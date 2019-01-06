@@ -1,0 +1,26 @@
+import string
+
+def printarangnoli(size):
+    lista = list(string.ascii_lowercase)
+    a = ''
+    reverso = []
+    coluna = (size-1)*4 + 1
+    for i in range(size-1,-1,-1):
+        a += str(lista[i])
+        if len(a) != 1:
+            b = '-'.join(a[:-1])+ '-' +'-'.join(a[::-1])
+            c = b.center(coluna, '-')
+            print(c)
+        else:
+            c = a.center(coluna, '-')
+            print(c)
+        reverso.append(c)
+    for i in range(2,len(reverso)+1):
+        print(reverso[-i])
+        
+def print_rangoli(size):
+    printarangnoli(size)  
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
