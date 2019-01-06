@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input().split()
+my_int = list(map(int,input().split()))
+A = set(list(map(int,input().split())))
+B = set(list(map(int,input().split())))
+c = 0
+for x in my_int:
+    if x in A:
+        c += 1
+    if x in B:
+        c-= 1
+print(c)
