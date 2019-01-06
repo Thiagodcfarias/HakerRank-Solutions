@@ -1,0 +1,25 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def printwelcome(i):
+    k = (i - 7)//2
+    welcome = '-'*k
+    welcome = welcome + 'WELCOME' + welcome
+    print(welcome)
+
+def printtriangulo(n,m,ascend):
+    banana = '.|.'
+    n = int((n-1)/2)
+    if ascend == 1:
+        for linha in range(n):
+            nb = banana*linha*2 + banana
+            k = (m - len(nb))//2
+            print('-'*k + nb + '-'*k)
+    else:  
+        for linha in range(n-1,-1,-1):
+            nb = banana*linha*2 + banana
+            k = (m - len(nb))//2
+            print('-'*k + nb + '-'*k)        
+        
+n, m = map(int,input().split())
+printtriangulo(n,m,1)
+printwelcome(m)
+printtriangulo(n,m,-1)
