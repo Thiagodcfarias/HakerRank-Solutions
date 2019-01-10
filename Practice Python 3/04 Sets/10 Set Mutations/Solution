@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n, a = int(input()),set(map(int,input().split()))
+
+for i in range(int(input())):
+    cmd, length = input().split()
+    b = set(map(int,input().split()))
+    eval('a.'+ cmd + '(b)')
+print(sum(a))
