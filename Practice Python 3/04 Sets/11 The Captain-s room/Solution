@@ -1,0 +1,5 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+k = int(input())
+passagers = list(map(int,input().split()))
+setpass = set(passagers)
+print(((sum(setpass)*k)-(sum(passagers)))//(k-1))
