@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+a = set(input().split())
+for i in range(int(input())):
+    b = set(input().split())
+    if len(b.intersection(a))<len(b):
+        print('False')
+        c = 1
+        exit()
+print('True')
+    
+    
