@@ -1,0 +1,6 @@
+import time
+def timeConversion(s):
+    s = s[:-2] + ' ' + s[-2:]
+    #print(s)
+    strt = time.strptime(s, '%I:%M:%S %p')
+    return time.strftime('%H:%M:%S', strt)
