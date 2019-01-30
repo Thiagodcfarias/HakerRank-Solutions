@@ -1,0 +1,14 @@
+def getTotalX(a, b):
+    total = 0
+    for x in list(range(a[-1], b[0] + 1)):
+        hold = 0
+        for v in a:
+            if (x % v == 0): hold += 1
+            else: hold = 0; break    
+        
+        for c in b:
+            if (c % x == 0): hold += 1
+            else: hold = 0; break       
+        if (hold == len(a) + len(b)):
+            total += 1   
+    return total
