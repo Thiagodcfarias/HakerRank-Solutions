@@ -1,0 +1,11 @@
+def breakingRecords(scores):
+    a, b = 0,0
+    x,y = scores[0],scores[0]
+    for i in range(1,len(scores)):
+        if scores[i] > x:
+            a +=1
+            x = scores[i]
+        elif scores[i] < y:
+            b += 1
+            y = scores[i]
+    return a, b
