@@ -1,0 +1,7 @@
+# Complete the birthday function below.
+def birthday(s, d, m):
+    a = 0
+    for i in range(len(s)):
+        if sum(s[i:i+m]) == d:
+            a += 1
+    return a
