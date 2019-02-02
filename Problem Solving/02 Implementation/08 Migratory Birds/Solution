@@ -1,0 +1,5 @@
+from collections import Counter     
+# Complete the migratoryBirds function below.
+def migratoryBirds(arr):
+    b = Counter(sorted(arr))
+    return b.most_common(1)[0][0]
