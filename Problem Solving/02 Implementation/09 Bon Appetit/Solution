@@ -1,0 +1,6 @@
+def bonAppetit(bill, k, b):
+    ana = (sum(bill) - bill[k])/2
+    if b - ana == 0:
+        print('Bon Appetit')
+    else:
+        print(int(b - ana))
