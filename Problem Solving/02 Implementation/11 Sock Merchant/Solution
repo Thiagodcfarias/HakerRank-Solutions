@@ -1,0 +1,3 @@
+def sockMerchant(n, ar):
+    s = set(ar)
+    return sum([int(ar.count(i)/2) for i in s])
