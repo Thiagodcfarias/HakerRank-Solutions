@@ -1,0 +1,7 @@
+def pageCount(n, p):
+    index = int(p/2)
+    if n/2 >= p:
+        return index
+    else:
+        total_index = int(n/2)
+        return total_index - index
