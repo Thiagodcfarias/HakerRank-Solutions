@@ -1,0 +1,12 @@
+def getMoneySpent(keyboards, drives, b):
+    lista = []
+    for k in keyboards:
+        for d in drives:
+            if d + k == b:
+                return b
+            if d + k < b:
+                lista.append(d+k)
+    if len(lista) > 1:
+        return max(lista)
+    else:
+        return -1
