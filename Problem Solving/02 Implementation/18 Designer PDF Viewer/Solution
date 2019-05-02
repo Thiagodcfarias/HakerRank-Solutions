@@ -1,0 +1,9 @@
+import string
+
+def designerPdfViewer(h, word):
+    y = 1
+    for i in word:
+        x = string.ascii_lowercase.index(i)
+        if h[x] > y:
+            y = h[x]
+    return y*len(word)
