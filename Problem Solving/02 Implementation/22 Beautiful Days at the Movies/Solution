@@ -1,0 +1,9 @@
+def beautifulDays(i, j, k):
+    x = 0
+    while i <= j:
+        a = str(i)
+        b = a[::-1] 
+        if (i - int(b))%k == 0:
+            x +=1
+        i +=1
+    return x
