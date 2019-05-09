@@ -1,0 +1,6 @@
+def circularArrayRotation(a, k, queries):
+    for i in range(k):
+        x = a.pop(-1)
+        a.insert(0,x) 
+
+    return (a[i] for i in queries)
