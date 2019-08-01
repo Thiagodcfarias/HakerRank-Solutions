@@ -1,0 +1,16 @@
+def superReducedString(s):
+    while True:
+        s1 = s
+        for i in range(0,len(s)):
+            try:
+                if i != len(s)-1 and s[i] == s[i+1]:
+                    s = s[0:i] + s[i+2:]
+                print(s)
+            except Exception:
+                continue
+        if s1 == s:
+            break
+
+    if len(s) == 0:
+        return 'Empty String'
+    return s
